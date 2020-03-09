@@ -47,9 +47,12 @@ class TicTacToe {
         // (X, Y) coordinates as `this.gameState[x][y]`, which is how the game
         // will check to see if the winner is known.
         this.gameState = [
-            [null, null, null],
-            [null, null, null],
-            [null, null, null]
+            [null, null, null, null, null],
+            [null, null, null, null, null],
+            [null, null, null, null, null],
+            [null, null, null, null, null],
+            [null, null, null, null, null]
+           
         ];
 
         // Array of Win States
@@ -62,49 +65,79 @@ class TicTacToe {
             [
                 [0, 0],
                 [0, 1],
-                [0, 2]
+                [0, 2],
+                [0, 3],
+                [0, 4]
                
             ],
             [
                 [1, 0],
                 [1, 1],
-                [1, 2]
+                [1, 2],
+                [1, 3],
+                [1, 4]
                
             ],
             [
                 [2, 0],
                 [2, 1],
-                [2, 2]
+                [2, 2],
+                [2, 3],
+                [2, 4]
               
+            ],
+            [
+                [3, 0],
+                [3, 1],
+                [3, 2],
+                [3, 3],
+                [3, 4]
+            ],
+            [
+                [4, 0],
+                [4, 1],
+                [4, 2],
+                [4, 3],
+                [4, 4]  
             ],
             [
                 [0, 0],
                 [1, 0],
-                [2, 0]
+                [2, 0],
+                [3, 0],
+                [4, 0]
              
             ],
             [
                 [0, 1],
                 [1, 1],
-                [2, 1]
+                [2, 1],
+                [3, 1],
+                [4, 1]
               
             ],
             [
                 [0, 2],
                 [1, 2],
-                [2, 2]
+                [2, 2],
+                [3, 2],
+                [4, 2]
            
             ],
             [
                 [0, 0],
                 [1, 1],
-                [2, 2]
+                [2, 2],
+                [3, 3],
+                [4, 4]
              
             ],
             [
-                [0, 2],
-                [1, 1],
-                [2, 0]
+                [0, 4],
+                [1, 3],
+                [2, 2],
+                [3, 1],
+                [4, 0]
           
             ]
         ];
@@ -138,7 +171,7 @@ class TicTacToe {
         }
         this.moveCount++;
         console.log(`Reviewed move ${this.moveCount}.`)
-        if (this.moveCount >= 9) {
+        if (this.moveCount >= 25) {
             console.log(`This game is a draw at ${this.moveCount} moves.`);
             this.gameStatus = 'draw';
 
